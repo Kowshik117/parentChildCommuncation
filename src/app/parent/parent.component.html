@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>it is the parent component</h1>
+  <div [formGroup]="registrationForm">
+    <div class="form-group">
+      <label > Name</label>
+      <input type="text" formControlName="name" class="form-control">
+    </div>
+    <div class="form-grpup">
+      <label>Password</label>
+      <input type="password" formControlName="password" class="form-control">
+    </div>
+   </div>
+   <div>
+    <button class="form-control" (click)="onSubmit()">ok</button>
+   </div>
+   <h2>data from child: <h4>{{childinfo.name}}</h4>
+    <h4>{{childinfo.password}}</h4>
+   </h2>
+
+</div>
+<hr>
+<app-child [data]="data" (notify)="childData($event)"></app-child>

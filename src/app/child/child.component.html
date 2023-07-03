@@ -1,0 +1,17 @@
+<h1>it is the child component</h1>
+<div>Data from parent: <h4>{{data.name}}</h4>
+  <h4>{{data.password}}</h4>
+</div>
+<div [formGroup]="registrationForm">
+  <div class="form-group">
+    <label > Name</label>
+    <input type="text" formControlName="name" class="form-control">
+  </div>
+  <div class="form-grpup">
+    <label>Password</label>
+    <input type="password" formControlName="password" class="form-control">
+  </div>
+ </div>
+ <div>
+  <button class="form-control" (click)="childData()">ok</button>
+ </div>
